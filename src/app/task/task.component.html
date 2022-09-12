@@ -1,0 +1,19 @@
+<div class="Container">
+  <div *ngIf="!edit; else editInput" class="Container__Task" tabindex="1">
+    {{ task }}
+  </div>
+  <ng-template #editInput>
+    <input *ngIf="edit" [(ngModel)]="task" class="editInput" type="text" />
+  </ng-template>
+  <button *ngIf="!edit; else save" (click)="editItem()" title="edit">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <ng-template #save>
+    <button *ngIf="edit" (click)="saveTask()" title="save">
+      <mat-icon>save</mat-icon>
+    </button>
+  </ng-template>
+  <button (click)="deleteTask()" tabindex="1" title="delete">
+    <mat-icon>clear</mat-icon>
+  </button>
+</div>

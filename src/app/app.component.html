@@ -1,0 +1,30 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<div class="Header">
+  <div>
+    <ui-switch
+      size="small"
+      color="#10618c"
+      checkedLabel="White"
+      uncheckedLabel="Blue"
+      checkedTextColor="#ffffff"
+      uncheckedTextColor="rgb(16, 97, 140)"
+      [checked]="isSwitchedOn"
+      (click)="changeBlackColor()"
+    ></ui-switch>
+  </div>
+  <div
+    [ngStyle]="{
+      color: isSwitchedOn ? 'White' : !isSwitchedOn ? 'Black' : null
+    }"
+    class="Header__Notes"
+  >
+    NOTES
+  </div>
+</div>
+<div class="Line">
+  <div [appChangeColor]="isSwitchedOn"></div>
+</div>
+<app-content [isSwitchedOn]="isSwitchedOn"></app-content>

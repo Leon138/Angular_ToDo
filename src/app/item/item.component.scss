@@ -1,0 +1,63 @@
+.Item {
+  width: 750px;
+  height: 460px;
+  margin-top: 60px;
+  background-color: rgba(119, 119, 119, 0.588);
+  border: 2px solid black;
+  overflow-y: auto;
+
+  &__Input {
+    display: flex;
+    margin: 20px 20px 5px 20px;
+
+    input {
+      width: 605px;
+      height: 30px;
+      vertical-align: middle;
+      border: 2px solid black;
+      font-size: 17px;
+      outline: none;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 73px;
+      height: 36px;
+      margin-left: 18px;
+      border: 2px solid black;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(75, 135, 198);
+    }
+  }
+
+  &__ValidInput {
+    margin-left: 22px;
+    color: red;
+    font-family: cursive;
+  }
+
+  &__Tasks {
+    margin-left: 20px;
+  }
+}
+
+.Item::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+.Item::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.Item::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}

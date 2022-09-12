@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "/node_modules/ngx-ui-switch/ui-switch.component.scss";
+
+.switch {
+  border: 2px solid white;
+  width: 50px;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(16, 97, 140);
+}

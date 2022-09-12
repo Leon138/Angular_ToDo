@@ -1,0 +1,29 @@
+<div class="Item">
+  <div class="Item__Input">
+    <input
+      [ngStyle]="{
+        'border-color':
+          taskControl.valid || !taskControl.touched ? 'black' : 'red'
+      }"
+      [formControl]="taskControl"
+      type="text"
+      placeholder="Task name"
+    />
+    <button (click)="addTask()" title="add">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+  </div>
+  <div class="Item__ValidInput">
+    <div *ngIf="taskControl.invalid && taskControl.touched">
+      Write > 3 symbols
+    </div>
+  </div>
+  <div class="Item__Tasks">
+    <app-task
+      *ngFor="let task of tasks; let index = index"
+      [task]="task"
+      (delete)="deleteTask(index)"
+      (save)="saveTask($event, index)"
+    ></app-task>
+  </div>
+</div>

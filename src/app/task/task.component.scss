@@ -1,0 +1,74 @@
+.Container {
+  display: flex;
+  align-items: center;
+
+  &__Task {
+    display: flex;
+    width: 507px;
+    height: 34px;
+    margin: 6px 0px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-family: cursive;
+    overflow: overlay;
+    background-color: white;
+  }
+
+  &__Task:focus {
+    background-color: rgb(204, 204, 204);
+    border: 1px solid;
+    height: 32px;
+    width: 505px;
+  }
+
+  &__Task:hover {
+    cursor: pointer;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+    width: 73px;
+    height: 36px;
+    background-color: white;
+  }
+
+  button:hover {
+    background-color: rgb(75, 135, 198);
+    cursor: pointer;
+  }
+}
+
+.Container__Task::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+
+.Container__Task::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.Container__Task::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.editInput {
+  width: 501px;
+  height: 30px;
+  margin: 5px 0px;
+  font-size: 18px;
+  padding-left: 15px;
+  font-family: cursive;
+  border-radius: 5px;
+  border: 2px solid rgb(75, 135, 198);
+}
+
+.editInput:focus-within {
+  box-shadow: 2px 2px 2px 0 rgb(75, 135, 198);
+  outline: none;
+}
